@@ -1,0 +1,262 @@
+/* BASIC SETTINGS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: white;
+    color: #222;
+}
+
+/* NAVBAR */
+.navbar {
+    height: 75px;
+    padding: 0 12%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    color: #fc8019;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.location {
+    font-size: 14px;
+    color: #444;
+    white-space: nowrap;
+}
+
+.search {
+    background: #f5f5f5;
+    padding: 12px 18px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    width: 330px;
+}
+
+.search input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    font-size: 13px;
+}
+
+.profile {
+    font-size: 27px;
+    cursor: pointer;
+}
+
+/* MAIN BANNER */
+.banner {
+    margin: 25px auto;
+    width: 78%;
+    height: 255px;
+    border-radius: 30px;
+
+    background:
+    linear-gradient(to right, rgba(0,0,0,0.8),
+    rgba(0,0,0,0.1)),
+    url("https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=1400");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.banner-content {
+    padding: 30px;
+}
+
+.banner h2 {
+    font-size: 25px;
+    margin-bottom: 85px;
+}
+
+.banner h1 {
+    font-size: 32px;
+}
+
+/* FOOD CATEGORIES */
+.categories {
+    width: 76%;
+    margin: 40px auto;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #ddd;
+}
+
+.categories h2,
+.restaurants h2 {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.category-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.category {
+    min-width: 90px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.category img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.category p {
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+/* RESTAURANTS */
+.restaurants {
+    width: 76%;
+    margin: 40px auto;
+}
+
+.restaurant-list {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 5px 5px 20px;
+}
+
+.restaurant-card {
+    min-width: 220px;
+    width: 220px;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.restaurant-card:hover {
+    transform: scale(0.97);
+}
+
+.restaurant-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.info {
+    padding: 10px;
+}
+
+.info h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.info h4 {
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+.info p {
+    color: #686868;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+/* FOOTER */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 35px;
+    margin-top: 50px;
+}
+
+footer h2 {
+    color: #fc8019;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 8px;
+    font-size: 14px;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 15px;
+        height: auto;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .search {
+        width: 100%;
+        order: 3;
+    }
+
+    .banner {
+        width: 92%;
+        height: 200px;
+        border-radius: 20px;
+    }
+
+    .banner-content {
+        padding: 20px;
+    }
+
+    .banner h2 {
+        margin-bottom: 55px;
+        font-size: 20px;
+    }
+
+    .banner h1 {
+        font-size: 23px;
+    }
+
+    .categories,
+    .restaurants {
+        width: 90%;
+    }
+
+    .categories h2,
+    .restaurants h2 {
+        font-size: 19px;
+    }
+
+    .category {
+        min-width: 75px;
+    }
+
+    .category img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .restaurant-card {
+        min-width: 190px;
+        width: 190px;
+    }
+
+}
